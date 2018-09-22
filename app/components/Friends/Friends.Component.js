@@ -7,9 +7,18 @@ class Friends extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.titleHeading}>
-                    Friends Screens
-                </Text>
+                <View style={styles.titleContainer}>
+                    <Text style={styles.titleHeading}>
+                        Friends Screen
+                    </Text>
+                </View>
+                <View style={styles.bodyContainer}>
+                    <View style={{flex: 1}}>
+                        <Text>
+                            Friends Body
+                        </Text>
+                    </View>
+                </View>
             </View>
         )
     }
