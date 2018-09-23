@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
-import styles from './Friends.Component.Style';
+import styles from './Friends.Screen.Component.Style';
 
 class Friends extends Component {
     render() {
