@@ -16,5 +16,13 @@ export default StyleSheet.create({
     },
     bodyContainer: {
         ...Common.bodyContainer
+    },
+    functionsContainer: {
+        flex: 1,
+        flexDirection: "column"
+    },
+    informationContainer: {
+        flex: 5,
+        flexDirection: "column"
     }
 })

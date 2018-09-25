@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 import {PropTypes} from 'prop-types';
 import {Calendar} from 'react-native-calendars';
 
@@ -24,10 +24,6 @@ class CalendarScreen extends Component {
         //     '2012-05-19': {disabled: true, disableTouchEvent: true}
         // }
 
-        let datess = {
-            "2018-08-23": {selected: true, startingDay: true, endingDay: true, color: "blue", textColor: "gray"},
-            "2018-08-24": {selected: true, startingDay: true, endingDay: true, color: "blue", textColor: "gray"}
-        }
         let dates = {}
         events.forEach(event => {
             const date = new Date(event.startDate*1000);
@@ -37,8 +33,6 @@ class CalendarScreen extends Component {
             month = month < 10 ? '0'+month : month;
             dates[`${year}-${month}-${day}`] = {selected: true, startingDay: true, endingDay: true, color: 'blue', textColor: 'gray'}
         });
-        console.log('datess', datess)
-        console.log('dates', dates)
         return dates
     }
     render () {
@@ -52,6 +46,16 @@ class CalendarScreen extends Component {
                     </Text>
                 </View>
                 <View style={styles.bodyContainer}>
+                    <View style={{flexDirection: "row", flex: 1}}>
+                        <View style={{flex: 1}}>
+                        </View>
+                        <View style={{flex: 1}}>
+                            <Button
+                                onPress={()=>{}}
+                                title="Select Group"
+                            />
+                        </View>
+                    </View>
                     <View style={styles.calendarContainer}>
                         <Calendar
                             current={'2018-08-22'}
@@ -74,6 +78,16 @@ class CalendarScreen extends Component {
                                 />
                             )
                         })*/}
+                    </View>
+                    <View style={{flexDirection: "row", flex: 1}}>
+                        <View style={{flex: 1}}>
+                        </View>
+                        <View style={{flex: 1}}>
+                            <Button
+                                onPress={()=>{}}
+                                title="Create Event"
+                            />
+                        </View>
                     </View>
                 </View>
             </View>

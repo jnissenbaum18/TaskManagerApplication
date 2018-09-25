@@ -18,8 +18,8 @@ export default StyleSheet.create ({
         ...Common.bodyContainer
     },
     calendarContainer: {
-        flex: 1,
-        justifyContent: 'space-around',
+        flex: 5,
+        justifyContent: 'flex-start',
         alignItems: 'stretch'
     },
     eventContainer: {
